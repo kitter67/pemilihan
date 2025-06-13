@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampanye Ketua OSIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        section {
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+        }
+        
+        .scroll-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+        
+        .hero-section {
+            /* Ganti background-image dengan gambar sendiri */
+            background-image: linear-gradient(rgba(0, 51, 255, 0.5), rgb(0, 42, 255)), url('');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .cards-section {
+            background-color: #f4f7fb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .vision-mission-section {
+            background-color: #ffffff;
+            overflow-y: auto;
+        }
+        
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+            position: absolute;
+            bottom: 30px;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .candidate-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 85%;
+            max-width: 300px;
+            margin: 10px;
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #4F46E5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Sembunyikan konten utama jika bukan mobile */
+        @media (min-width: 768px) {
+            body > .scroll-container {
+                display: none !important;
+            }
+            .desktop-warning {
+                display: flex !important;
+            }
+        }
+        .desktop-warning {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 9999;
+            text-align: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-warning">
+        <div>
+            <h1 class="text-2xl font-bold text-blue-700 mb-4">Akses Khusus Mobile</h1>
+            <p class="text-gray-700 mb-2">Maaf, halaman ini hanya dapat dibuka di perangkat HP (mobile).</p>
+            <p class="text-gray-500 text-sm">Silakan buka menggunakan smartphone Anda.</p>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <!-- Section 1: Hero Section with Full Background Image -->
+        <section class="hero-section">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl font-bold mb-2">PEMILIHAN</h1>
+                <h2 class="text-3xl font-bold mb-6">KETUA OSIS 2023/2024</h2>
+                <div class="bg-white bg-opacity-20 backdrop-blur-sm p-4 rounded-lg inline-block">
+                    <p class="text-xl font-semibold">"Bersama Membangun Sekolah yang Lebih Baik"</p>
+                </div>
+            </div>
+            <div class="scroll-indicator text-white text-center">
+                <p class="mb-2">Scroll untuk melihat kandidat</p>
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Section 2: Candidate Cards -->
+        <section class="cards-section px-2">
+            <h2 class="text-2xl font-bold text-center text-blue-800 mb-6">PASANGAN NOMOR 1</h2>
+            <div class="grid grid-cols-2 gap-2 w-full max-w-xs mx-auto">
+                <!-- Ketua Card -->
+                <div class="candidate-card w-full max-w-none m-0 aspect-square flex flex-col justify-between p-2">
+                    <div>
+                        <div class="bg-blue-600 text-white font-bold py-1 px-2 rounded-full text-center mb-2 text-xs">
+                            KETUA
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="gambar/sidqiw2.jpg" alt="Foto Ahmad" class="rounded-full w-14 h-14 object-cover mb-1 border-2 border-blue-500">
+                            <p class="text-base font-bold">SIDQIW</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-blue-100 rounded-lg p-1 my-2">
+                            <p class="text-center text-blue-800 font-semibold text-xs">"Inovasi untuk Kemajuan"</p>
+                        </div>
+                        <div class="flex justify-center space-x-1 flex-wrap">
+                            <span class="px-1 py-0.5 bg-purple-100 text-purple-800 rounded-full text-[10px] font-medium m-0.5">#Inovasi</span>
+                            <span class="px-1 py-0.5 bg-blue-100 text-blue-800 rounded-full text-[10px] font-medium m-0.5">#Kolaborasi</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wakil Card -->
+                <div class="candidate-card w-full max-w-none m-0 aspect-square flex flex-col justify-between p-2">
+                    <div>
+                        <div class="bg-blue-600 text-white font-bold py-1 px-2 rounded-full text-center mb-2 text-xs">
+                            WAKIL
+                        </div>
+                        <div class="text-center flex flex-col items-center">
+                            <img src="gambar/farhan.jpg" alt="Foto Siti" class="rounded-full w-14 h-14 object-cover mb-1 border-2 border-blue-500">
+                            <p class="text-base font-bold">FARHAN</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-blue-100 rounded-lg p-1 my-2">
+                            <p class="text-center text-blue-800 font-semibold text-xs">"Bersama Meraih Prestasi"</p>
+                        </div>
+                        <div class="flex justify-center space-x-1 flex-wrap">
+                            <span class="px-1 py-0.5 bg-green-100 text-green-800 rounded-full text-[10px] font-medium m-0.5">#Prestasi</span>
+                            <span class="px-1 py-0.5 bg-yellow-100 text-yellow-800 rounded-full text-[10px] font-medium m-0.5">#Kreativitas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator text-blue-800 text-center mt-8">
+                <p class="mb-2">Scroll untuk melihat Visi & Misi</p>
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Section 3: Vision & Mission -->
+        <section class="vision-mission-section p-4">
+            <div class="w-full max-w-xs mx-auto">
+                <h2 class="text-2xl font-bold text-center text-blue-600 mb-6 pt-4">Visi & Misi</h2>
+                
+                <div class="bg-blue-600 text-white font-bold py-2 px-4 rounded-full text-center mb-4">
+                    PASANGAN NOMOR 1
+                </div>
+                
+                <div class="flex justify-center space-x-4 mb-6">
+                    <div class="text-center">
+                        <div class="avatar" style="width: 60px; height: 60px; font-size: 24px;">S</div>
+                        <p class="font-semibold">SIDQIW</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="avatar" style="width: 60px; height: 60px; font-size: 24px;">F</div>
+                        <p class="font-semibold">FARHAN</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        Visi
+                    </h3>
+                    <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-500">
+                        <p class="text-gray-700">Mewujudkan OSIS sebagai tempat pengembangan potensi siswa agar lebih berkembang dalam berprestasi dan berkarakter untung
+                                meningkatkan sekolah menjadi lebih unggul dan berkarakter dalam berorganisasi dan bersosialisasi</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                        Misi
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
+                            <p class="text-gray-700">1. Memulai program kegiatan yang mendorong kreativitas dan inovasi siswa</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
+                            <p class="text-gray-700">2. Membangun komunikasi yang baik antar jurusan dan organisasi yang ada disekolah</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
+                            <p class="text-gray-700">3. Meningkatkan prestasi akademik dan non-akademik melalui berbagai kompetisi</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
+                            <p class="text-gray-700">4. Menumbuhkan jiwa kepemimpinan dan tanggung jawab dikalangan siswa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
+                        Program Unggulan
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="bg-yellow-50 rounded-lg p-3 border-l-4 border-yellow-500">
+                            <p class="text-gray-700">1. event lomba kretif</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-3 border-l-4 border-yellow-500">
+                            <p class="text-gray-700">2. Mengembangkan bakat siswa</p>
+                        </div>
+                        <div class="bg-yellow-50 rounded-lg p-3 border-l-4 border-yellow-500">
+                            <p class="text-gray-700">3. Kompetisi bakat dan minat antar kelas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center py-4">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                        Dukung Sidqiw & Farhan
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
